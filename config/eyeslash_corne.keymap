@@ -108,7 +108,7 @@
 &trans  &kp EXCL      &kp AT          &kp HASH       &kp DOLLAR     &kp PERCENT                                    &mmv MOVE_UP                     &kp CARET     &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR      &kp BSPC
 &trans  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3   &kp NUMBER_4   &kp NUMBER_5                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LG(L)
 &trans  &kp LEFT_GUI  &rgb_ug RGB_ON  &kp RS(RC(C))  &kp RC(RS(V))  &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &none         &none         &kp MINUS     &kp COMMA     &kp PERIOD    &kp FSLH
-                                      &trans         &trans         &trans                                                                          &kp INS       &kp DEL       &trans
+                                      &trans         &trans         &trans                                                                          &trans        &kp DEL       &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -117,10 +117,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+&trans  &kp CARET       &kp LESS_THAN         &kp GREATER_THAN       &kp DLLR         &kp PRCNT                            &mmv MOVE_UP                     &kp AT_SIGN           &kp AMPS         &kp ASTRK      &kp SQT    &kp GRAVE          &kp BSPC
+&trans  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp EQUAL            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp NON_US_BACKSLASH  &kp MINUS        &kp PLUS       &kp SLASH  &kp DOUBLE_QUOTES  &kp GRAVE
+&trans  &out OUT_USB    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDERSCORE   &kp HASH   &trans                    &mmv MOVE_DOWN                   &kp PIPE              &kp EXCLAMATION  &kp SEMICOLON  &kp COLON  &kp QUESTION       &trans
+                                              &trans                 &trans           &kp SPACE                                                             &kp RET               &trans           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -140,8 +140,8 @@
 
         control_layer {
             bindings = <
-&none  &none            &none           &none         &none         &none                            &none         &none            &none            &none            &none            &none  &none
-&none  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3              &none  &none  &none  &none            &none            &none            &none            &none  &none
+&none  &none            &none           &none         &none         &none                            &none         &kp PAGE_UP      &kp HOME         &kp UP_ARROW     &kp END          &none  &none
+&none  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3              &none  &none  &none  &kp PAGE_DOWN    &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &none  &none
 &none  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &none         &none         &rgb_ug RGB_EFF  &none           &none         &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none  &none
                                         &none         &none         &none                                          &none            &none            &none
             >;

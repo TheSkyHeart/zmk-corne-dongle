@@ -79,10 +79,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
+&trans  &kp EXCL      &kp AT          &kp HASH       &kp DOLLAR     &kp PERCENT                                    &mmv MOVE_UP                     &kp CARET     &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR      &kp BSPC
+&trans  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3   &kp NUMBER_4   &kp NUMBER_5                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LG(L)
+&trans  &kp LEFT_GUI  &rgb_ug RGB_ON  &kp RS(RC(C))  &kp RC(RS(V))  &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &none         &none         &kp MINUS     &kp COMMA     &kp PERIOD    &kp FSLH
+                                      &trans         &trans         &trans                                                                          &kp INS       &kp DEL       &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;

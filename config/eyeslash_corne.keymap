@@ -51,26 +51,6 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
-
-        hmr: homewrow_mods_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_RIGHT_HAND";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            hold-trigger-key-positions = <0 1 44 43 42 33 18 5 4 3 2 17 16 15 14 13 28 30 29 31 32>;
-        };
-
-        hml: homewrow_mods_left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_LEFT_HAND";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            hold-trigger-key-positions = <7 22 36 46 45 47 37 23 8 9 24 38 39 25 10 11 40 26 12 27 41>;
-        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -93,10 +73,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &kp Q              &kp W                &kp E             &kp R            &kp T                               &kp UP                &kp Y        &kp U             &kp I        &kp O                 &kp P                       &kp ESCAPE
-&kp BACKSPACE   &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D   &hml LEFT_GUI F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &hmr RIGHT_GUI J  &hmr RALT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_SHIFT SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &kp Z              &kp X                &kp C             &kp V            &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M             &kp COMMA    &kp DOT               &kp FSLH                    &kp RIGHT_SHIFT
-                                                        &kp LEFT_CONTROL  &mo 1            &lt 3 SPACE                                               &lt 3 ENTER  &mo 2             &kp RALT
+&lt 4 TAB       &kp Q  &kp W  &kp E             &kp R  &kp T                               &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P          &kp ESCAPE
+&kp BACKSPACE   &kp A  &kp S  &kp D             &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
+                              &kp LEFT_CONTROL  &mo 1  &lt 3 SPACE                                               &lt 3 ENTER  &mo 2  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -107,7 +87,7 @@
             bindings = <
 &trans  &kp EXCL      &kp AT          &kp HASH       &kp DOLLAR     &kp PERCENT                                    &mmv MOVE_UP                     &kp CARET     &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR      &kp BSPC
 &trans  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3   &kp NUMBER_4   &kp NUMBER_5                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LG(L)
-&trans  &kp LEFT_GUI  &rgb_ug RGB_ON  &kp RS(RC(C))  &kp RC(RS(V))  &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &none         &none         &kp MINUS     &kp COMMA     &kp PERIOD    &kp FSLH
+&trans  &kp LEFT_GUI  &rgb_ug RGB_ON  &kp RS(RC(C))  &kp RC(RS(V))  &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &none         &kp MINUS     &kp COMMA     &kp DOT       &kp FSLH      &trans
                                       &trans         &trans         &trans                                                                          &trans        &kp DEL       &trans
             >;
 

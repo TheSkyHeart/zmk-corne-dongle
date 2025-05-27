@@ -109,24 +109,24 @@ layers:
   - ^
   - '&'
   - '*'
-  - \
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: \, s: '|'}
+  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '~', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: +, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: _, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '-', h: '$$mdi:apple-keyboard-shift$$', s: _}
+  - '~'
+  - +
+  - _
+  - {t: '-', s: _}
   - '|'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - ':'
-  - {t: (, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: ), h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '`', h: '$$mdi:apple-keyboard-option$$', s: '~'}
-  - {t: '@', h: RIGHT GUI}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - (
+  - )
+  - {t: '`', s: '~'}
+  - '@'
+  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - <
   - '>'

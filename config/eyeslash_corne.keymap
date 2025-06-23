@@ -92,10 +92,10 @@
         qwerty {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &kp Q                 &kp W             &kp E              &kp R              &kp T                                            &mmv MOVE_UP                     &kp Y               &kp U               &kp I               &kp O              &kp P                       &lt 4 ESC
+&kp TAB         &kp Q                 &kp W             &kp E              &kp R              &kp T                                            &mmv MOVE_UP                     &kp Y               &kp U               &kp I               &kp O              &kp P                       &lt 5 ESC
 &kp BACKSPACE   &kp A                 &hrm_left LALT S  &hrm_left LCTRL D  &hrm_left LSHFT F  &kp G                            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H               &hrm_right RSHFT J  &hrm_right RCTRL K  &hrm_right RALT L  &kp SEMICOLON               &kp SQT
 &kp LEFT_SHIFT  &hrm_left LEFT_GUI Z  &kp X             &kp C              &kp V              &kp B               &kp SPACE                    &mmv MOVE_DOWN                   &kp N               &kp M               &kp COMMA           &kp DOT            &hrm_right RIGHT_GUI SLASH  &kp RIGHT_SHIFT
-                                                        &kp LEFT_CONTROL   &mo 3              &layer_tap 5 SPACE                                                                &layer_tap 5 ENTER  &mo 2               &kp RIGHT_ALT
+                                                        &kp LEFT_CONTROL   &mo 3              &layer_tap 4 SPACE                                                                &layer_tap 4 ENTER  &mo 2               &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -107,7 +107,7 @@
 &kp GRAVE       &kp Q             &kp W             &kp F                &kp P              &kp B                                          &kp UP                &kp J               &kp L               &kp U               &kp Y              &kp APOS           &kp MINUS
 &caps_word      &hrm_left LGUI A  &hrm_left LALT R  &hrm_left LCTRL S    &hrm_left LSHFT T  &kp G                                &kp LEFT  &kp ENTER  &kp RIGHT  &kp M               &hrm_right RSHFT N  &hrm_right RCTRL E  &hrm_right RALT I  &hrm_right RGUI O  &kp SEMI
 &kp LEFT_SHIFT  &kp Z             &kp X             &kp C                &kp D              &kp V                   &kp SPACE              &kp DOWN              &kp K               &kp H               &kp COMMA           &kp DOT            &kp FSLH           &kp TAB
-                                                    &layer_tap 6 DELETE  &layer_tap 5 ESC   &layer_tap 4 BACKSPACE                                               &layer_tap 2 SPACE  &layer_tap 5 ENTER  &layer_tap 7 TAB
+                                                    &layer_tap 7 DELETE  &layer_tap 6 ESC   &layer_tap 5 BACKSPACE                                               &layer_tap 2 SPACE  &layer_tap 6 ENTER  &layer_tap 7 TAB
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -137,7 +137,19 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        number {
+        Nav {
+            display-name = "Nav";
+            bindings = <
+&rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_SPD  &rgb_ug RGB_SPI   &rgb_ug RGB_BRD  &rgb_ug RGB_BRI                                &mmv MOVE_UP                     &kp PAGE_UP    &kp HOME        &kp UP_ARROW    &kp END        &kp K_REDO  &sys_reset
+&bt BT_CLR       &kp LEFT_GUI       &kp LEFT_ALT     &kp LEFT_CONTROL  &kp LEFT_SHIFT   &bt BT_SEL 4                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp RIGHT   &bootloader
+&bt BT_CLR_ALL   &ext_power EP_TOG  &out OUT_TOG     &rgb_ug RGB_OFF   &rgb_ug RGB_ON   &rgb_ug RGB_TOG  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp K_LOCK     &kp LS(LC(V))   &kp LS(LC(C))   &kp LS(LC(T))  &kp END     &studio_unlock
+                                                     &trans            &trans           &trans                                                                          &trans         &trans          &trans
+            >;
+
+            sensor-bindings = <&rgb_encoder>;
+        };
+
+        Fun {
             bindings = <
 &kp F1           &kp F2    &kp F3    &kp F4     &kp F5     &kp F6                             &kp UP                &kp PERCENT   &kp N7     &kp N8   &kp N9  &kp EQUAL  &kp BACKSPACE
 &kp F7           &kp F8    &kp F9    &kp F10    &kp F11    &kp F12                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp PLUS      &kp N4     &kp N5   &kp N6  &kp MINUS  &kp ENTER
@@ -145,7 +157,7 @@
                                      &trans     &trans     &trans                                                   &kp N0        &kp COMMA  &kp DOT
             >;
 
-            label = "NUMBER";
+            label = "Fun";
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
@@ -161,23 +173,12 @@
             sensor-bindings = <&rgb_encoder>;
         };
 
-        gaming {
-            bindings = <
-&kp T   &kp TAB    &kp Q  &kp W      &kp E    &kp R                        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&kp G   &kp LSHFT  &kp A  &kp S      &kp D    &kp F                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL  &kp Z  &kp X      &kp C    &kp V      &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                          &kp ENTER  &kp ESC  &kp SPACE                                    &trans  &trans  &trans
-            >;
-
-            label = "GAMING";
-        };
-
         lower {
             bindings = <
 &to 0   &to 1   &to 0   &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &tog 6  &tog 5  &tog 4                                    &tog 2  &tog 5  &trans
+                        &trans  &tog 6  &tog 5                                    &tog 2  &tog 6  &trans
             >;
 
             label = "LOWER";

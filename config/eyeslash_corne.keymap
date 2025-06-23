@@ -92,10 +92,10 @@
         qwerty {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &kp Q             &kp W             &kp E              &kp R              &kp T                                            &mmv MOVE_UP                     &kp Y               &kp U               &kp I               &kp O              &kp P                 &kp ESCAPE
-&kp BACKSPACE   &hrm_left LGUI A  &hrm_left LALT S  &hrm_left LCTRL D  &hrm_left LSHFT F  &kp G                            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H               &hrm_right RSHFT J  &hrm_right RCTRL K  &hrm_right RALT L  &hrm_right RGUI SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z             &kp X             &kp C              &kp V              &kp B               &kp SPACE                    &mmv MOVE_DOWN                   &kp N               &kp M               &kp COMMA           &kp DOT            &kp FSLH              &kp RIGHT_SHIFT
-                                                    &kp LEFT_CONTROL   &mo 3              &layer_tap 4 SPACE                                                                &layer_tap 4 ENTER  &mo 2               &kp RIGHT_ALT
+&kp TAB         &kp Q                 &kp W             &kp E              &kp R              &kp T                                            &mmv MOVE_UP                     &kp Y               &kp U               &kp I               &kp O              &kp P                       &lt 4 ESC
+&kp BACKSPACE   &kp A                 &hrm_left LALT S  &hrm_left LCTRL D  &hrm_left LSHFT F  &kp G                            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H               &hrm_right RSHFT J  &hrm_right RCTRL K  &hrm_right RALT L  &kp SEMICOLON               &kp SQT
+&kp LEFT_SHIFT  &hrm_left LEFT_GUI Z  &kp X             &kp C              &kp V              &kp B               &kp SPACE                    &mmv MOVE_DOWN                   &kp N               &kp M               &kp COMMA           &kp DOT            &hrm_right RIGHT_GUI SLASH  &kp RIGHT_SHIFT
+                                                        &kp LEFT_CONTROL   &mo 3              &layer_tap 5 SPACE                                                                &layer_tap 5 ENTER  &mo 2               &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -107,7 +107,7 @@
 &kp GRAVE       &kp Q             &kp W             &kp F                &kp P              &kp B                                          &kp UP                &kp J               &kp L               &kp U               &kp Y              &kp APOS           &kp MINUS
 &caps_word      &hrm_left LGUI A  &hrm_left LALT R  &hrm_left LCTRL S    &hrm_left LSHFT T  &kp G                                &kp LEFT  &kp ENTER  &kp RIGHT  &kp M               &hrm_right RSHFT N  &hrm_right RCTRL E  &hrm_right RALT I  &hrm_right RGUI O  &kp SEMI
 &kp LEFT_SHIFT  &kp Z             &kp X             &kp C                &kp D              &kp V                   &kp SPACE              &kp DOWN              &kp K               &kp H               &kp COMMA           &kp DOT            &kp FSLH           &kp TAB
-                                                    &layer_tap 5 DELETE  &layer_tap 4 ESC   &layer_tap 3 BACKSPACE                                               &layer_tap 2 SPACE  &layer_tap 4 ENTER  &layer_tap 6 TAB
+                                                    &layer_tap 6 DELETE  &layer_tap 5 ESC   &layer_tap 4 BACKSPACE                                               &layer_tap 2 SPACE  &layer_tap 5 ENTER  &layer_tap 7 TAB
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -125,12 +125,24 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
+        Num {
+            label = "Num";
+            bindings = <
+&trans  &kp N1        &kp N2        &kp N3            &kp N4          &kp N5                             &kp UP                &kp N6        &kp N7      &kp N8     &kp N9  &kp N0     &kp BACKSPACE
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp SLASH                &kp LEFT  &kp ENTER  &kp RIGHT  &kp PLUS      &kp N4      &kp N5     &kp N6  &kp MINUS  &kp ENTER
+&trans  &mkp MB5      &mkp MB4      &mkp LCLK         &mkp MCLK       &mkp RCLK  &kp C_MUTE              &kp DOWN              &kp ASTERISK  &kp N1      &kp N2     &kp N3  &kp EQUAL  &kp CARET
+                                    &trans            &trans          &trans                                                   &kp N0        &kp PERIOD  &kp COMMA
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+        };
+
         number {
             bindings = <
-&kp F1           &kp F2                 &kp F3                 &kp F4                      &kp F5                    &kp F6                             &kp UP                &kp PERCENT   &kp N7     &kp N8   &kp N9  &kp EQUAL  &kp BACKSPACE
-&kp F7           &hrm_left LEFT_GUI F8  &hrm_left LEFT_ALT F9  &hrm_left LEFT_CONTROL F10  &hrm_left LEFT_SHIFT F11  &kp F12                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp PLUS      &kp N4     &kp N5   &kp N6  &kp MINUS  &kp ENTER
-&kp PRINTSCREEN  &mkp MB5               &mkp MB4               &mkp LCLK                   &mkp MCLK                 &mkp RCLK  &kp C_MUTE              &kp DOWN              &kp ASTERISK  &kp N1     &kp N2   &kp N3  &kp FSLH   &kp CARET
-                                                               &trans                      &trans                    &trans                                                   &kp N0        &kp COMMA  &kp DOT
+&kp F1           &kp F2    &kp F3    &kp F4     &kp F5     &kp F6                             &kp UP                &kp PERCENT   &kp N7     &kp N8   &kp N9  &kp EQUAL  &kp BACKSPACE
+&kp F7           &kp F8    &kp F9    &kp F10    &kp F11    &kp F12                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp PLUS      &kp N4     &kp N5   &kp N6  &kp MINUS  &kp ENTER
+&kp PRINTSCREEN  &mkp MB5  &mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp C_MUTE              &kp DOWN              &kp ASTERISK  &kp N1     &kp N2   &kp N3  &kp FSLH   &kp CARET
+                                     &trans     &trans     &trans                                                   &kp N0        &kp COMMA  &kp DOT
             >;
 
             label = "NUMBER";
@@ -165,22 +177,10 @@
 &to 0   &to 1   &to 0   &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &tog 5  &tog 4  &tog 3                                    &tog 2  &tog 4  &trans
+                        &tog 6  &tog 5  &tog 4                                    &tog 2  &tog 5  &trans
             >;
 
             label = "LOWER";
-        };
-
-        Num {
-            label = "Num";
-            bindings = <
-&trans  &kp N1        &kp N2        &kp N3            &kp N4          &kp N5                             &kp UP                &kp N6        &kp N7      &kp N8     &kp N9  &kp N0     &kp BACKSPACE
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp SLASH                &kp LEFT  &kp ENTER  &kp RIGHT  &kp PLUS      &kp N4      &kp N5     &kp N6  &kp MINUS  &kp ENTER
-&trans  &mkp MB5      &mkp MB4      &mkp LCLK         &mkp MCLK       &mkp RCLK  &kp C_MUTE              &kp DOWN              &kp ASTERISK  &kp N1      &kp N2     &kp N3  &kp EQUAL  &kp CARET
-                                    &trans            &trans          &trans                                                   &kp N0        &kp PERIOD  &kp COMMA
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
     };
 };

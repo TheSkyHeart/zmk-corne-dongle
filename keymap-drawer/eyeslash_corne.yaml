@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:keyboard-esc$$', h: NUMBER}
+  - {t: '$$mdi:keyboard-esc$$', h: Fun}
   - {t: '$$mdi:backspace$$', type: backspace}
   - A
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
@@ -45,8 +45,8 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - Num
-  - {t: '$$mdi:keyboard-space$$', h: SYSTEM}
-  - {t: '$$mdi:keyboard-return$$', h: SYSTEM}
+  - {t: '$$mdi:keyboard-space$$', h: Nav}
+  - {t: '$$mdi:keyboard-return$$', h: Nav}
   - SYMBOL
   - $$mdi:apple-keyboard-option$$
   COLEMAK:
@@ -92,9 +92,9 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-tab$$
-  - {t: '$$mdi:backspace-reverse-outline$$', h: GAMING}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: LOWER}
   - {t: '$$mdi:keyboard-esc$$', h: SYSTEM}
-  - {t: '$$mdi:backspace$$', h: NUMBER}
+  - {t: '$$mdi:backspace$$', h: Fun}
   - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
   - {t: '$$mdi:keyboard-return$$', h: SYSTEM}
   - {t: '$$mdi:keyboard-tab$$', h: LOWER}
@@ -196,7 +196,56 @@ layers:
   - {t: '0', s: )}
   - .
   - {t: ',', s: <}
-  NUMBER:
+  Nav:
+  - RGB EFR
+  - RGB EFF
+  - RGB SPD
+  - RGB SPI
+  - RGB BRD
+  - RGB BRI
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - PgUp
+  - HOME
+  - $$mdi:arrow-up-bold$$
+  - END
+  - REDO
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
+  - $$mdi:bluetooth-off$$
+  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
+  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - PgDn
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - $$mdi:arrow-right-bold$$
+  - $$mdi:progress-download$$
+  - BT CLR ALL
+  - EP TOG
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
+  - RGB OFF
+  - RGB ON
+  - RGB TOG
+  - $$mdi:volume-off$$
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - LOCK
+  - Sft+Ctl+V
+  - Sft+Ctl+C
+  - Sft+Ctl+T
+  - END
+  - '&studio_unlock'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  Fun:
   - F1
   - F2
   - F3
@@ -289,59 +338,10 @@ layers:
   - END
   - '&studio_unlock'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  - {type: held alternate}
-  - {t: '$$mdi:transfer$$', type: trans}
-  GAMING:
-  - T
-  - $$mdi:keyboard-tab$$
-  - Q
-  - W
-  - E
-  - R
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - G
-  - $$mdi:apple-keyboard-shift$$
-  - A
-  - S
-  - D
-  - F
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-control$$
-  - Z
-  - X
-  - C
-  - V
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:keyboard-return$$', type: held}
-  - $$mdi:keyboard-esc$$
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   LOWER:
   - {t: QWERTY, h: toggle}
@@ -386,9 +386,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: GAMING, h: toggle}
+  - {type: held}
   - {t: SYSTEM, h: toggle}
-  - {t: NUMBER, h: toggle}
+  - {t: Fun, h: toggle}
   - {t: SYMBOL, h: toggle}
   - {t: SYSTEM, h: toggle}
-  - {type: held}
+  - {type: held alternate}

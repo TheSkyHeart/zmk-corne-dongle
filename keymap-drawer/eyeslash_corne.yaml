@@ -13,9 +13,9 @@ layers:
   - I
   - O
   - P
-  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:keyboard-esc$$', h: NUMBER}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: A, h: LGUI}
+  - A
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
@@ -27,10 +27,10 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: RGUI, s: ':'}
+  - {t: ;, s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
-  - Z
+  - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
   - X
   - C
   - V
@@ -41,10 +41,10 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - {t: /, h: RIGHT GUI, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
-  - NUMBER
+  - Num
   - {t: '$$mdi:keyboard-space$$', h: SYSTEM}
   - {t: '$$mdi:keyboard-return$$', h: SYSTEM}
   - SYMBOL
@@ -147,6 +147,55 @@ layers:
   - {type: held alternate}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  Num:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - $$mdi:arrow-up-bold$$
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
+  - {t: /, s: '?'}
+  - $$mdi:arrow-left-bold$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:arrow-right-bold$$
+  - +
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '-', s: _}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB5'
+  - '&mkp MB4'
+  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:mouse-scroll-wheel$$
+  - $$mdi:mouse-right-click-outline$$
+  - $$mdi:volume-off$$
+  - $$mdi:arrow-down-bold$$
+  - '*'
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '=', s: +}
+  - ^
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '0', s: )}
+  - .
+  - {t: ',', s: <}
   NUMBER:
   - F1
   - F2
@@ -160,12 +209,12 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '=', s: +}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:backspace$$', type: held}
   - F7
-  - {t: F8, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: F9, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: F10, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: F11, h: '$$mdi:apple-keyboard-shift$$'}
+  - F8
+  - F9
+  - F10
+  - F11
   - F12
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -191,7 +240,7 @@ layers:
   - {t: /, s: '?'}
   - ^
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {t: '0', s: )}
   - {t: ',', s: <}
@@ -343,52 +392,3 @@ layers:
   - {t: SYMBOL, h: toggle}
   - {t: SYSTEM, h: toggle}
   - {type: held}
-  Num:
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - $$mdi:arrow-up-bold$$
-  - {t: '6', s: ^}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
-  - {t: '0', s: )}
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-command$$
-  - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-shift$$
-  - {t: /, s: '?'}
-  - $$mdi:arrow-left-bold$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:arrow-right-bold$$
-  - +
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - {t: '6', s: ^}
-  - {t: '-', s: _}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&mkp MB5'
-  - '&mkp MB4'
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
-  - $$mdi:volume-off$$
-  - $$mdi:arrow-down-bold$$
-  - '*'
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '=', s: +}
-  - ^
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '0', s: )}
-  - .
-  - {t: ',', s: <}
